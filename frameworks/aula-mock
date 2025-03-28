@@ -1,0 +1,15 @@
+Aula Mock
+
+Classes são o foco do teste.
+
+- Mockito: framework Java.
+
+
+Classes para mockar (classes dificeis):
+- DAO.
+
+Classes para não mockar (classes simples):
+- Entidades.
+- Classes de domínio.
+
+
