@@ -10,14 +10,16 @@ public class GerenciadorLivro {
 	}
 
 	public void cancelarReservas() {
-		//implementação feita só para passar no teste... implementar solucao completa
-		
-		//buscar livros reservados 
 		List<Livro> reservados = lDao.listarReservados();
-		//percorre e verificar se a reserva é maior que 7 dias ou nao.
-		//caso seja deve cancelarReserva
-		lDao.alterar(reservados.get(0));
-		//persistir no bd o livro alterado 
+
+		for (Livro livro : reservados) {
+			Period period = Period.between(livro.getDataReserva(), LocalDate.now());
+			if (period.getDays() > 7) {
+				livro.cancelaReserva();
+				lDao.alterar(livro);
+			}
+		}
+
 	}
 
 	public boolean locar(int id, String email) {
