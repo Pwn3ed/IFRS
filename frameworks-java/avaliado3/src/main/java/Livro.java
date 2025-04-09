@@ -106,6 +106,17 @@ public class Livro {
 		this.setDataReserva(LocalDate.now());
 	}
 
+	public void cancelaReserva() {
+		if (this.stats == Stats.RESERVADO) {
+			this.dataReserva = null;
+			this.stats = Stats.DISPONIVEL;
+			this.email = null;
+		}
+		else {
+			throw new IllegalArgumentException("Error. Livro já está reservado.");
+		}
+	}
+
 	public void locar(String email) {
 		if (this.stats == Stats.LOCADO) {
 			throw new IllegalArgumentException("Error. Livro já está locado.");
@@ -123,28 +134,5 @@ public class Livro {
 		this.setEmail(null);
 		this.setDataReserva(null);
 	}
-
-	// public boolean isstats() {
-	// 	return stats;
-	// }
-
-	// public void reserva() {
-	// 	if (!this.stats) {
-	// 		this.dataReserva = LocalDate.now();
-	// 		this.stats = true;
-	// 	}
-	// 	else {
-	// 		throw new IllegalArgumentException("Error. Livro já está reservado.");
-	// 	}
-	// }
-
-	// public void cancelaReserva() {
-	// 	if (this.stats) {
-	// 		this.dataReserva = null;
-	// 		this.stats = false;
-	// 	}
-	// 	else {
-	// 		throw new IllegalArgumentException("Error. Livro já está reservado.");
-	// 	}
-	// }
+	
 }

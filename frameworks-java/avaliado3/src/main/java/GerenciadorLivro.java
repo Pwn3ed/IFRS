@@ -4,7 +4,6 @@ import java.util.List;
 
 public class GerenciadorLivro {
 	private LivroDao lDao;
-	private EmailService service;
 
 	public GerenciadorLivro(LivroDao ldao) {
 		this.lDao = ldao;
@@ -34,7 +33,7 @@ public class GerenciadorLivro {
 		return true;
 	}
 
-	public boolean devolver(int id, String email) {
+	public boolean devolver(int id) {
 		Livro livro = lDao.get(id);
 
 		try {
@@ -60,7 +59,7 @@ public class GerenciadorLivro {
 		return true;
 	}
 
-	public void avisarReservaNoFinal() {
+	public void avisarReservaNoFinal(EmailService service) {
 		List<Livro> reservados = lDao.listarReservados();
 
 		for (Livro livro : reservados) {
@@ -73,7 +72,7 @@ public class GerenciadorLivro {
 		}
 	}
 
-	public void avisarLocacalFinal() {
+	public void avisarLocacaoFinal(EmailService service) {
 		List<Livro> livros = lDao.listar(0, Integer.MAX_VALUE);
 
 		for (Livro livro : livros) {
@@ -81,9 +80,9 @@ public class GerenciadorLivro {
 			int days = period.getDays();
 
 			if (days >= 12 && days <= 14) {
-				service.enviaEmail("Seu livro está prestes a expirar, fique atento ao prazo.", "Reserva prestes a expirar", livro.getEmail());
+				service.enviaEmail("Seu livro está prestes a expirar, fique atento ao prazo.", "Locação prestes a expirar", livro.getEmail());
 			} else if (days > 14) {
-				service.enviaEmail("Seu livro expirou! Por favor, realize uma nova locação ou devolva o livro para a loja, obrigado.", "Reserva expirada", livro.getEmail());
+				service.enviaEmail("Seu livro expirou! Por favor, realize uma nova locação ou devolva o livro para a loja, obrigado.", "Locação expirada", livro.getEmail());
 			}
 		}
 	}
