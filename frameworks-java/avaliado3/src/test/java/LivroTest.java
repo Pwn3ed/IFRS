@@ -52,7 +52,6 @@ public class LivroTest {
 
 	}
 
-
 	@Test
 	public void shouldCreateNewLivro() {
 		String titulo = "Dev";

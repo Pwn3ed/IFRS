@@ -31,7 +31,7 @@ public class GerenciadorLivro {
 		} catch (IllegalArgumentException e) {
 			throw e;
 		}
-		
+
 		return true;
 	}
 
@@ -69,22 +69,27 @@ public class GerenciadorLivro {
 			int days = period.getDays();
 
 			if (days >= 5 && days <= 7) {
-				service.enviaEmail("Seu periodo de reserva do livro está acabando, fique atento ao prazo!", "Reserva no final", livro.getEmail());
+				service.enviaEmail(
+						"Seu periodo de reserva do livro está acabando, fique atento ao prazo!",
+						"Reserva no final", livro.getEmail());
 			}
 		}
 	}
 
 	public void avisarLocacaoFinal(EmailService service) {
-		List<Livro> livros = lDao.listar(0, Integer.MAX_VALUE);
+		List<Livro> locados = lDao.listarReservados();
 
-		for (Livro livro : livros) {
+		for (Livro livro : locados) {
 			Period period = Period.between(livro.getDataReserva(), LocalDate.now());
 			int days = period.getDays();
 
 			if (days >= 12 && days <= 14) {
-				service.enviaEmail("Seu livro está prestes a expirar, fique atento ao prazo.", "Locação prestes a expirar", livro.getEmail());
+				service.enviaEmail("Seu livro está prestes a expirar, fique atento ao prazo.",
+						"Locação prestes a expirar", livro.getEmail());
 			} else if (days > 14) {
-				service.enviaEmail("Seu livro expirou! Por favor, realize uma nova locação ou devolva o livro para a loja, obrigado.", "Locação expirada", livro.getEmail());
+				service.enviaEmail(
+						"Seu livro expirou! Por favor, realize uma nova locação ou devolva o livro para a loja, obrigado.",
+						"Locação expirada", livro.getEmail());
 			}
 		}
 	}
