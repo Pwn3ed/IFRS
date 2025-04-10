@@ -77,7 +77,7 @@ public class GerenciadorLivro {
 	}
 
 	public void avisarLocacaoFinal(EmailService service) {
-		List<Livro> locados = lDao.listarReservados();
+		List<Livro> locados = lDao.listarLocados();
 
 		for (Livro livro : locados) {
 			Period period = Period.between(livro.getDataReserva(), LocalDate.now());

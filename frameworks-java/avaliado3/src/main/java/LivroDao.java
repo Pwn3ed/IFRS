@@ -25,4 +25,8 @@ public class LivroDao {
 	public List<Livro> listarReservados() {
 		return new ArrayList<Livro>();
 	}
+
+	public List<Livro> listarLocados() {
+		return new ArrayList<Livro>();
+	}
 }

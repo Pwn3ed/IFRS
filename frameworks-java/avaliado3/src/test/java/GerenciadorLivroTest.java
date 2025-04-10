@@ -17,13 +17,15 @@ public class GerenciadorLivroTest {
 		this.locados = new ArrayList<>();
 
 		this.reservados.add(new Livro(1, "Dev1", 300, 0, Stats.RESERVADO, LocalDate.now().minusDays(3),
-				"dev@email.com"));
+				"dev1@email.com"));
 		this.reservados.add(new Livro(2, "Dev2", 250, 0, Stats.RESERVADO, LocalDate.now().minusDays(6),
 				"dev2@email.com"));
-		this.locados.add(new Livro(3, "Dev3", 200, 0, Stats.LOCADO, LocalDate.now().minusDays(12),
-				"dev3@email.com"));
-		this.locados.add(new Livro(4, "Dev4", 150, 0, Stats.LOCADO, LocalDate.now().minusDays(18),
+		this.reservados.add(new Livro(3, "Dev3", 250, 0, Stats.RESERVADO, LocalDate.now().minusDays(8),
+				"dev3@email.com"));				
+		this.locados.add(new Livro(4, "Dev4", 200, 0, Stats.LOCADO, LocalDate.now().minusDays(12),
 				"dev4@email.com"));
+		this.locados.add(new Livro(5, "Dev5", 150, 0, Stats.LOCADO, LocalDate.now().minusDays(18),
+				"dev5@email.com"));
 
 		this.gerenciadorLivro = new GerenciadorLivro(this.lDaoMock);
 	}
@@ -32,9 +34,8 @@ public class GerenciadorLivroTest {
 	public void shouldCancelarLivros() {
 		start();
 		when(this.lDaoMock.listarReservados()).thenReturn(this.reservados);
-		Livro livro = this.reservados.get(0);
+		Livro livro = this.reservados.get(2);
 
-		// testar o gerenciador
 		this.gerenciadorLivro.cancelarReservas();
 
 		verify(lDaoMock).listarReservados();
