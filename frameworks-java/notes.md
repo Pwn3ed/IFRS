@@ -26,4 +26,20 @@ Criar rotinas depois de cada teste:
 - fazer rollback (controle transacional)
 - Connection .setAutoCommit(true) //para sempre salvar as alterações no banco
 
+## Teste de Sistema
+
+- Caixa preta: testa sem analisar o que tem dentro.
+- Caixa branca: testa analisando o que tem dentro do código.
+
+- Site: testa como as páginas se comunicam.
+
+Selenium: framework utilizando para automatizar navegadores.
+
+# Apresentação
+
+- PDF explicando como funciona os testes, quais serão as entradas, quais serão os testes, e quais serão as saídas.
+
+Entradas: clicar em um botão pode ser uma entrada.
+
+- em média 5 minutos de apresentação.
 

@@ -13,7 +13,6 @@ Descritores: media de 500 itens.
 - Dashboard
 
 qual plataforma usou?
-quais descritores?
 qual foi a filtragem de apps?
 
 
