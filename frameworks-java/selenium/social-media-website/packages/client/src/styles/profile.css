@@ -1,0 +1,48 @@
+
+.profile-data{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.profile-edit-icon{
+    cursor: pointer;
+    
+    font-size: 35px;
+}
+
+.profile-title{
+    font-size: 24px;
+}
+
+.profile-label{
+    width: 60%;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-label p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.profile-buttons{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    
+    padding: 12px;
+}

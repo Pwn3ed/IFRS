@@ -1,0 +1,120 @@
+
+.form-header-container{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0px 12px 0px 30px ;
+}
+
+.form-header-message{
+    color: darkorchid;
+}
+.form-close-button{
+    cursor: pointer;
+
+    border: none;
+    background-color: transparent;
+
+    color: darkorchid;
+
+    font-weight: 600;
+    font-size: 26px;
+}
+.form-close-button:hover{
+    color: darkred;
+}
+
+.form-data{    
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 20px;
+}
+
+.form-input-label{
+    width: 80%;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 15px;
+    text-align: start;
+
+    cursor: pointer;
+    border-bottom: 2px solid black;
+}
+
+.form-input{
+    width: 100%;
+
+    background-color: transparent;
+    outline: none;
+    border: none;
+
+    text-align: end;
+
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.form-submit-container{
+    min-height: 90px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: end;
+    align-items: center;
+
+    padding: 12px;
+}
+
+.form-to-link{
+    font-size: 12px;
+}
+.form-to-link:hover{
+    text-decoration: none;
+}
+
+.form-button{
+    cursor: pointer;
+
+    width: 30%;
+
+    background-color: transparent;
+    outline: none;
+    border: none;
+
+    align-self: center;
+
+    margin: 0px 0px 24px 0px;
+
+    padding: 8px;
+
+    background-color: rgb(255, 255, 231);
+    border-bottom: 9px solid rgba(19, 43, 16, 0.267);
+
+    transition: 80ms ease-out;
+}
+
+.form-button:hover{
+    border: none;
+    box-shadow: inset 0px 3px 6px 0px rgba(0, 0, 0, 0.267);
+    color: darkgoldenrod;
+}
+
+.form-validation{
+    align-self: flex-end;
+    width: 80%;
+    color: red;
+}

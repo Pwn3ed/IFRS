@@ -1,0 +1,92 @@
+
+.chat-container{
+    align-self: center;
+
+    width: 90%;
+    min-height: 200px;
+    max-height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    
+    background-color: rgb(255, 255, 231);
+    outline: 5px solid rgba(19, 43, 16, 0.096);
+    box-shadow: inset 0px 5px 9px 1px rgba(0, 0, 0, 0.267);
+
+    overflow-y: auto;
+
+    border-radius: 12px;
+
+    margin: 20px;
+
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    margin: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: rgba(19, 43, 16, 0.1);
+    border-radius: 30px;
+}
+
+.chat-input-container{
+    height: 30px;
+    align-self: center;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: end;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 20px;
+}
+
+.chat-text-input{
+    min-width: 200px;
+
+    background-color: rgb(255, 255, 231);
+    border-radius: 8px;
+    border: none;
+    outline: none;
+
+    box-shadow: inset 0px 4px 8px 0px rgba(0, 0, 0, 0.281);
+    outline: 4px solid rgba(19, 43, 16, 0.096);
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+
+    padding: 8px;
+}
+.chat-text-submit{
+    cursor: pointer;
+
+    background-color: rgb(255, 255, 231);
+    border: none;
+    outline: none;
+
+    padding: 6px;
+    border-bottom: 4px solid rgba(19, 43, 16, 0.267);
+
+    transition: 120ms ease-out;
+}
+
+.chat-text-submit:hover{
+    box-shadow: inset 0px 3px 6px 0px rgba(0, 0, 0, 0.267);
+    color: darkgoldenrod;
+    border: none;
+}
+
+.chat-division{
+    width: 80%;
+
+    border: 2px dashed black;
+}
