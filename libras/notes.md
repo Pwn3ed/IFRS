@@ -9,3 +9,9 @@
 - Cores
 - Material Escolar
 - Disciplinas
+- Sujeito
+
+# Trabalho de Libras
+
+- Jogo de soletrar em Libras Termooo
+
