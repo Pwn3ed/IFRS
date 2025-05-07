@@ -43,3 +43,73 @@ Entradas: clicar em um botão pode ser uma entrada.
 
 - em média 5 minutos de apresentação.
 
+# JPA - Java Persistence API (2006) && Hibernate
+- Entity
+- JPQL (linguagem do JPA para SQL)
+- Persistence.xml
+
+# Persistence
+- Criar arquivo "persistence.xml" local pasta "META-INF" dentro do classpath do projeto.
+- Este arquivo será a Unidade de Persistência, com todas informações do banco.
+
+* Dados de conexão:
+* - URL
+* - Usuário
+* - Senha
+* - Driver
+
+Criação automática:
+- Create
+- Update
+- Validate
+
+* hibernate.show_sql
+* hibernate.format_sql
+
+# Entity (modelo associado a uma tabela)
+- Nova forma utilizando annotation ao invés do arquivo "persistance.xml"
+- Classe em tabela
+- Atributos em colunas
+- Definições de restrições de integridade
+
+Exemplo:
+@Entity
+public class empregado {
+    @Id
+    private String cpf;
+    private String nome;
+    private LocalDate datanascimento;
+}
+
+@Table(name="<valor>")
+@Column
+@GeneratedValue
+
+Exemplo:
+@Entity
+@Table(name="\"funcionario\"")
+public class empregado {
+    @Id
+    @GeneratedValue
+    private int id;
+
+    @Column(name="nome_emp", nullable=true, unique=true, length=150)
+    private String nome;
+    private LocalDate datanascimento;
+}
+
+# Conexão com o banco
+- EntityManagerFactory
+- EntityManager (pode executar queries)
+
+## Métodos
+- persist: INSERT
+- find: SELECT
+- merge: UPDATE
+- remove: DELETE
+- createNativeQuery(): SQL nativo (menos recomendável)
+- createQuery(): JPQL (mais recomendável)
+## Controle de Transação
+- getTransaction().begin() [COMEÇAR CADA COMANDO]
+- getTransaction().commit() [FINALIZAR CADA COMANDOG]
+
