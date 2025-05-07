@@ -1,5 +1,3 @@
-RTSP: rtsp://45.174.239.108:50211/user=admin&password=994913&channel=1&stream=0
-
 
 # First Notes
 
