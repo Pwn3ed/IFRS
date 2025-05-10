@@ -10,6 +10,7 @@
 - Material Escolar
 - Disciplinas
 - Sujeito
+- Legislação
 
 # Trabalho de Libras
 
