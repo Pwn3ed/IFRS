@@ -71,6 +71,8 @@ Criação automática:
 - Classe em tabela
 - Atributos em colunas
 - Definições de restrições de integridade
+- @id: define chave primária
+- @Transient: salvo em memória, não salva no banco
 
 Exemplo:
 @Entity
