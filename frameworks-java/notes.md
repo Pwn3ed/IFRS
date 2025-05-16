@@ -107,11 +107,25 @@ public class empregado {
 ## Métodos
 - persist: INSERT
 - find: SELECT
-- merge: UPDATE
+- merge: UPDATE ou INSERT, se o objeto já existe ele faz UPDATE, se não, INSERT
 - remove: DELETE
 - createNativeQuery(): SQL nativo (menos recomendável)
 - createQuery(): JPQL (mais recomendável)
+
 ## Controle de Transação
 - getTransaction().begin() [COMEÇAR CADA COMANDO]
 - getTransaction().commit() [FINALIZAR CADA COMANDOG]
+
+# Estado do Objeto (entity) JPA
+- New
+- Managed
+- Detached
+- Removed
+
+# Relacionamentos 
+- OneToOne
+- OneToMay
+- ManyToOne
+- ManyToMany
+
 
