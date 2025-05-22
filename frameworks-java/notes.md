@@ -124,8 +124,23 @@ public class empregado {
 
 # Relacionamentos 
 - OneToOne
-- OneToMay
+- OneToMany
 - ManyToOne
 - ManyToMany
 
+
+# Prova (04/06/25)
+- Testes (unitário, integração, sistema)
+
+## Cola de papel:
+- Folha A4 (frente e verso), escrita a mão
+
+## Código:
+- Testes Unitários -> JUnit (annotations, assertivas ...)
+- Mocking (mockito)
+
+## Teórico:
+- TDD
+- Teste de Integração
+- Teste de Sistema
 
