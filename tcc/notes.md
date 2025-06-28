@@ -96,3 +96,17 @@ Prototipação: FIgma.
 Pontos Negativos:
 - O problema não ta bem amarrado com o objetivo.
 
+# ATCC apresentações pré-banca - 24/06/2025
+
+## Rafael - Jogo Serio
+
+### Objetivos específicos: 
+- Analisar o que ja existe
+- Entender como q faz
+
+
+
+
+
+
+

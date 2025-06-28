@@ -10,3 +10,9 @@ http.csrf.
 - auth.requestMatcher("/admin").hasRole("admin");
 
 # Spring Data JPA
+
+# Dicas para artigo/tcc
+
+- Precisa ter bons trabalhos relacionados.
+
+- 
