@@ -81,3 +81,12 @@ R) É uma identidade própria.
 - Que momento nós vivemos? p.78.
 R) Temos pessoas formadas em Libras mas ainda não é o suficiente.
 
+# Prova Final
+
+- Tema: Frutas
+
+1) prova prática de 10 questoes no computador.
+
+2) 4 frases com o tema.
+
+3) apresentação de si mesmo, com oi, boa noite, meu nome é diego, tenho 24 anos.
