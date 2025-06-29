@@ -11,8 +11,4 @@ http.csrf.
 
 # Spring Data JPA
 
-# Dicas para artigo/tcc
 
-- Precisa ter bons trabalhos relacionados.
-
-- 

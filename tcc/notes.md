@@ -105,6 +105,7 @@ Pontos Negativos:
 - Entender como q faz
 
 
+# Dicas para artigo/tcc do Humberto: possuir bons trabalhos correlatos.
 
 
 
