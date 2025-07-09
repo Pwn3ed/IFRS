@@ -89,4 +89,16 @@ R) Temos pessoas formadas em Libras mas ainda não é o suficiente.
 
 2) 4 frases com o tema.
 
-3) apresentação de si mesmo, com oi, boa noite, meu nome é diego, tenho 24 anos.
+3) apresentação de si mesmo
+
+oi, boa noite, tudo bem? meu nome é diego, idade 24 anos, moro em xangrila, estudo ads no if.
+
+frases:
+
+1) Meu irmão gosta de comer melancia.
+
+2) Eu cortando abacaxi ontem cortei meu dedo.
+
+3) Gaucho gosta de tomar chimarrao e comer bergamota.
+
+4) Viajei para praia e 
