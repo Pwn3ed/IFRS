@@ -98,12 +98,9 @@ Pontos Negativos:
 
 # ATCC apresentações pré-banca - 24/06/2025
 
-## Rafael - Jogo Serio
+- Objetivos específicos poucos acertam, pois não é falar sobre seu trabalho.
 
-### Objetivos específicos: 
-- Analisar o que ja existe
-- Entender como q faz
-
+- Não perder tempo explicando teorias e conceitos, muito menos sobre NAT e Redirecionamento de portas, só mostrar que é um problema e ir pro próximo.
 
 # Dicas para artigo/tcc do Humberto: possuir bons trabalhos correlatos.
 
