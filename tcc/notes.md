@@ -100,7 +100,7 @@ Pontos Negativos:
 
 - Objetivos específicos poucos acertam, pois não é falar sobre seu trabalho.
 
-- Não perder tempo explicando teorias e conceitos, muito menos sobre NAT e Redirecionamento de portas, só mostrar que é um problema e ir pro próximo.
+- Não perder tempo explicando teorias e conceitos, muito menos sobre NAT e Redirecionamento de portas, só mostrar que é um problema e ir pro próximo. 
 
 # Dicas para artigo/tcc do Humberto: possuir bons trabalhos correlatos.
 
