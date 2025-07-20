@@ -104,7 +104,7 @@ Pontos Negativos:
  
 # Dicas para artigo/tcc do Humberto: possuir bons trabalhos correlatos.
 
-
+- Usar kafka para gerencias as "filas" de stream.
 
 
 
