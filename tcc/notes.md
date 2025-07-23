@@ -106,5 +106,6 @@ Pontos Negativos:
 
 - Usar kafka para gerencias as "filas" de stream.
 
-- CloudFlare Tunnel
+- CloudFlare Tunnel para aumentar a segurança
+
 
