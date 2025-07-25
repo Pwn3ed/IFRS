@@ -108,4 +108,4 @@ Pontos Negativos:
 
 - CloudFlare Tunnel para aumentar a segurança
 
-
+- Usar docker containers
