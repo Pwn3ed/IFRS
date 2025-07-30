@@ -1,6 +1,12 @@
 # AULA 1
 
-- 2 avaliações: 1 prova, 1 trabalho.
+- 2 avaliações: 1 prova, 1 trabalho
 
-- LGPD.
+- LGPD
+
+- Pejotização
+
+- Contrato de gaveta
+
+- Anarquista
 
