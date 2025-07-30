@@ -1,3 +1,3 @@
 # Graduation Files
 
-A repo to organize files from graduation.
+A monorepo to organize files from graduation.
