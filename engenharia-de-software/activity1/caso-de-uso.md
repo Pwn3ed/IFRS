@@ -24,6 +24,7 @@ Ator -> Caso de uso
 
 
                            
+```txt
      ┌─────┐                                                     ┌─────────┐
      │Aluno│   ◄──┐                                              │Instrutor│
      └─────┘      │                                              └─────────┘
@@ -40,6 +41,7 @@ Ator -> Caso de uso
                   │
                   │
                   └──────────────── Treino
+```
 
 
 
