@@ -2,7 +2,7 @@
 
 https://app.diagrams.net/?src=about#LUntitled%20Diagram.drawio#%7B%22pageId%22%3A%22m8m2iFlxCTWb-2zP2oj0%22%7D
 
-```
+```txt
 ┌───────┐                                   ┌───────────────┐
 │ Aluno │                                   │ Administrador │
 ├───────┴────────────┐                      ├───────────────┴─────┐

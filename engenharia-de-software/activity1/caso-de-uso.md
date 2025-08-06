@@ -23,26 +23,3 @@ Ator -> Caso de uso
     - Visualizar plano
 
 
-                           
-```txt
-     ┌─────┐                                                     ┌─────────┐
-     │Aluno│   ◄──┐                                              │Instrutor│
-     └─────┘      │                                              └─────────┘
-                  │      Cadastrar plano de mensalidade  
-                  │
-                  │
-                  ├────────────── Matricula
-                  │                   ▲
-                  │                   │
-                  │                   │
-                  │                 Plano
-                  │
-                  │
-                  │
-                  │
-                  └──────────────── Treino
-```
-
-
-
-
