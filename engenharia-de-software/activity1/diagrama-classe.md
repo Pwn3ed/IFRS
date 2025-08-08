@@ -1,5 +1,6 @@
 # Diagrama de classe
 
+ https://app.diagrams.net/#LUntitled%20Diagram.drawio#%7B%22pageId%22%3A%22PuDE8fyEbCvzkWqKJKRD%22%7D
 
 ```txt
 ┌─────┐                                              
@@ -9,18 +10,51 @@
 │- nome: String               │                           
 │- telefone: String           │                           
 │- endereco: String           │                           
-│- altura: double             │                           
+│- peso: Double               │
+│- altura: Double             │                           
 │- observacoes: String        │
 ├─────────────────────────────┤                           
-│- visualizarTreinos(): void  │                           
-│                             │                           
-│                             │       
-│                             │
-│                             │
-│                             │
+│+ visualizarTreinos(): void  │                           
 │                             │
 └─────────────────────────────┘
 
+
+┌─────┐                           
+│plano│          
+├─────┴───────────────────────────┐
+│- id: Integer                    │
+│- tipos: tipo_pagamento          │
+│- valor: Float                   │      
+│- horarios: String               │
+├─────────────────────────────────┤
+│                                 │
+└─────────────────────────────────┘
+                                  
+┌────────────────┐
+│<<enumeration>> │
+│tipo_pagamento  │
+├────────────────┤
+│mensal          │
+│semestral       │
+│anual           │
+└────────────────┘
+
+┌─────────┐
+│matricula│        
+├─────────┴─────────────────────┐
+│- data_inicial                 │
+│- vencimento_plano             │
+│- valor_matricula              │       
+│- forma_pagamento              │       
+│- instrutor_resposavel         │       
+├───────────────────────────────┤
+│- forma_pagamento: String()    │
+│                               │
+│                               │
+│                               │
+│                               │
+│                               │
+└───────────────────────────────┘
  
  ┌──────┐                                      
  │treino│                          
@@ -62,54 +96,9 @@
  └───────────────────────────┘
 
 
-
-
-
-┌─────────┐
-│matricula│        
-├─────────┴─────────────────────┐
-│- data_inicial                 │
-│- vencimento_plano             │
-│- valor_matricula              │       
-│- forma_pagamento              │       
-│- instrutor_resposavel         │       
-├───────────────────────────────┤
-│                               │
-│                               │
-│                               │
-│                               │
-│                               │
-│                               │
-└───────────────────────────────┘
                    
 
-
-┌─────┐                           
-│plano│          
-├─────┴───────────────────────────┐
-│- tipos: tipo_pagamento          │
-│- tempo_validade                 │
-│- valor                          │
-│- horarios                       │
-├─────────────────────────────────┤
-│                                 │
-│                                 │
-│                                 │
-│                                 │
-│                                 │
-│                                 │
-└─────────────────────────────────┘
-
-┌────────────────┐
-│<<enumeration>> │
-│tipo_pagamento  │
-├────────────────┤
-│mensal          │
-│semestral       │
-│anual           │
-└────────────────┘
 ```
-
 
 
 
