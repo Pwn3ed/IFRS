@@ -36,17 +36,6 @@
 - A longo prazo gera mais custo que a etapa de desenvolvimento
 
 
-### Metodologias de desenvolvimento de software
-
-Tradicionais:
-- Cascata
-- Incremental
-- Prototipagem
-- Espiral
-
-Ágeis:
-- XP
-- Scrum
 
 
 ## O que é software?
@@ -75,4 +64,39 @@ Tradicionais:
 ### Diagrama de Sequência
 
 - Geralmente um caso de uso muito importante vira diagrama de sequência
+
+
+## Metodologias de desenvolvimento de software
+
+Tradicionais:
+- Cascata
+- Incremental
+- Prototipagem
+- Espiral
+
+Ágeis:
+- XP
+- Scrum
+
+### Cascata
+
+- Ciclos de vida que funcionam em blocos, idealmente, depois de finalizado, não volta mais
+
+Quando utilizar?
+- Requisitos fixos e bem conhecidos com antecedência
+- Baixas probabilidades de mudanças radicais
+
+
+### Incremental
+- Divide em problemas menores
+- Cada ciclo recomeça as etapas, tipo modelo cascata
+- Entregas parciais
+
+
+### Prototipagem
+- Criação de protótipos visuais
+- Diagramas UML
+- Protótipo MVP (minimamente funcional)
+- Auxilia o cliente
+
 
