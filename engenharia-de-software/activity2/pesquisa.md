@@ -1,6 +1,6 @@
 # Pesquisa sobre falha de software
 
-## Git
+## 1. Git
 
 - Durante as férias de julho estava assistindo vídeos no youtube do `Fabio Akitta` - canal incrível para jogar na cara do programador conceitos básicos que são de suma importância para a carreira de desenvolvedor, mas que muitos não sabem - e ele contou a história do Github, como foi fundado, porque se destacou no mercado, etc...
 
@@ -11,4 +11,14 @@
 - Essa história foi contada por Linus Torvalds em uma palestra, então, ele apresentou o Git, pela necessidade de salvar seu repositório do Linux de forma segura, ele próprio encontrou o grande gargalo dos versionadores de código existentes e o consertou, através do conceito de "Tarball" e de "Patch", foi possível salvar apenas as diferenças do código, melhorando considerávelmente a performance. E o merge também foi melhorado, através das "Pull Requests" foi possível identificar os conflitos e resolver manualmente, ou utilizar a lógica de manter sempre os arquivos mais recentes no repositório, facilitando e melhorando a performance do merge.
 
 - Com isso o Git ganhou muito mercado e virou exemplo de versionador de código a ser seguido, não somente, mas exemplo de como a engenharia de software faz diferença, se aplicada desde o começo do processo de desenvolvimento de software, analisando criticamente os pontos de gargalo e simplificando a lógica do software, se torna mais leve e menos propenso a erros, e no caso de um versionador de código, era algo extremamente necessário que até então ninguém tinha conseguido pensar nessa solução, tanto que é contado que o Git foi desenvolvido em poucas semanas, devido ao seu ótimo planejamento.
+
+## 2. Pressman
+
+Fases do processo de software:
+- Comunicação
+- Planejamento
+- Modelagem
+- Construção
+- Entrega
+
 
