@@ -99,4 +99,6 @@ Quando utilizar?
 - Protótipo MVP (minimamente funcional)
 - Auxilia o cliente
 
+## Histórias do Professor Responsável: Metodologia Científica Aplicada 1
 
+- O professor responsável deve aprovar o aluno para a obtenção do título de Tecnólogo em Análise e Desenvolvimento de Sistemas.

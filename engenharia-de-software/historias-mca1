@@ -1,0 +1,13 @@
+
+
+* O professor responsável deseja saber qual será o orientador de determinado aluno.
+* O professor responsável deseja receber o projeto de um aluno.
+* O professor responsável deve aprovar ou não o projeto que lhe foi encaminhado.
+* O professor responsável deve cadastrar o aluno em sua disciplina.
+* O professor responsável deve encaminhar a nota de sua matéria para o aluno e seu professor orientador.
+* O professor responsável deve ser capaz de verificar se o professor escolhido como orientador é um professor da área, e caso não seja, deve ser capaz de solicitar um co-orientador que esteja na área 
+
+
+* O professor responsável deve aprovar o aluno em sua disciplina.
+
+* O professor responsável deve ser capaz de definir uma banca avaliadora um determinado aluno.
