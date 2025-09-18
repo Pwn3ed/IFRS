@@ -34,4 +34,10 @@
 - busca de oportunidades e iniciatiava
 
 
+## Validações
 
+1. validação - qualquer pessoa.
+2. validação - algum investidor com dinheiro, que entende do mercado.
+3. validação - usuarios, clientes finais.
+
+Proposta: A proposta da nossa aplicação é criar conexão  entre usuários que possuem ideias de projetos em andamento e usuários disponíveis para colaborar com o projeto. O diferencial está na facilidade com que a troca de  Informações é feita, facilitando a busca por Colaboradores. 
