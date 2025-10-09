@@ -1,4 +1,4 @@
-# Fernando Almeida
+# Palestra Fernando Almeida
 
 ## Psicologia
 - Equilíbrio é questão de escolha.
