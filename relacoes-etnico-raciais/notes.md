@@ -12,3 +12,5 @@
 - 30% análise de casos de uso.
 - 50% trabalho prático de inclusão.
 
+### Quilombo / Favela / Comunidade
+
