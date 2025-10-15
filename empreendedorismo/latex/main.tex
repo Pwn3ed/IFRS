@@ -3,56 +3,125 @@
 \usepackage[brazil]{babel}
 \usepackage{multirow}
 \usepackage{array}
-\usepackage{xcolor}
+\usepackage[table]{xcolor}
 \usepackage{geometry}
 
-\geometry{a4paper, margin=1cm}
+\geometry{paperwidth=700pt,paperheight=1300pt, margin=1cm}
 \definecolor{lightgray}{gray}{0.9}
+\definecolor{blueval}{RGB}{0,0,180} % azul para segunda validação
+\definecolor{greenval}{RGB}{0,150,0} % verde para terceira validação
+\newcommand{\hoje}{\number\day/\number\month/\number\year}
 
 \begin{document}
 
-\begin{table}
+% ---------- HEADER ----------
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{10pt}
+\rowcolors{1}{lightgray}{white}
+\begin{tabular}{|p{4cm}|p{7cm}|p{3cm}|p{2cm}|}
+\hline
+\textbf{Projeto} & \textbf{Criado Por} & \textbf{Data} & \textbf{Versão} \\
+\hline
+ColabHUB & Daniel, Diego, Gustavo Martins, Gustavo Policarpo e Leonardo & \hoje & 1.0 \\
+\hline
+\end{tabular}
+\end{table}
+% ----------------------------
+
+\vspace{0.5cm}
+
+% ---------- MAIN TABLE ----------
+\begin{table}[h!]
 \centering
 \renewcommand{\arraystretch}{1.8}
-\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{|p{6cm}|p{6cm}|p{6cm}|}
 \hline
 \rowcolor{lightgray}
-\textbf{Parceiros Chave} & 
-\multirow{4}{*}{\centering\textbf{\LARGE PROPOSTA DE VALOR}} & 
+\textbf{Parceiros Chave} &
+\centering\textbf{PROPOSTA DE VALOR} &
 \textbf{Relacionamento com Clientes} \\
-\cline{1-1}\cline{3-3}
-• Empresas de Tecnologia & & • Marketing Digital \\
-• Provedores de Hospedagem & & • Redes Sociais \\
-• Busca por Parceiros & & • Blog Educativo \\
-& & • Afiliados \\
+\cline{1-1}\cline{2-2}\cline{3-3}
+• Empresas de Tecnologia (doações) & • Networking & • Website \\
+• Provedores de Hospedagem & • Conveniência & • Redes Sociais \\
+& • Colaboração & • Aplicativo Móvel \\
+& • Estudo & \\
+\textcolor{red}{• Escolher parceiros que possam ajudar sem gastar muito.} &
+\textcolor{red}{• Mostrar rapidamente como o projeto ajuda a colaborar.} &
+\textcolor{red}{• Explicar fácil como usar e responder dúvidas rapidamente.} \\
+\textcolor{blueval}{• Priorizar parcerias que tragam reputação ou acesso ao público certo.} &
+\textcolor{blueval}{• Garantir que o valor seja claro e percebido por quem mais importa.} &
+\textcolor{blueval}{• Criar formas de manter contato frequente e útil com usuários.} \\
+\textcolor{greenval}{• Fortalecer parcerias com empresas que se mostraram interessadas na pesquisa.} &
+\textcolor{greenval}{• Reforçar os benefícios mais valorizados pelos usuários na pesquisa.} &
+\textcolor{greenval}{• Investir em comunicação nos canais que os usuários preferem.} \\
 \hline
 \rowcolor{lightgray}
 \textbf{Atividades Chave} & & \textbf{Canais} \\
-\cline{1-1}\cline{3-3}
-• Desenvolvimento & & • Google Adwords \\
-• Marketing e Vendas & & • Facebook Ads \\
-• Estudo/Pesquisa & & • Email Marketing \\
-& & • Afiliados \\
+\cline{1-1}\cline{2-2}\cline{3-3}
+• Desenvolvimento da Plataforma & & • Google Adwords \\
+• Promoção da Plataforma nos Canais & & • Facebook Ads \\
+• Busca por Parceiros & & • Email Marketing \\
+& & • Afiliados (Influenciadores) \\
+& & • Social Orgânico \\
 & & • Blog \\
+\textcolor{red}{• Sempre melhorar o site e deixar tudo fácil de usar.} & 
+& 
+\textcolor{red}{• Divulgar em lugares que estudantes e desenvolvedores realmente usam.} \\
+\textcolor{blueval}{• Planejar atividades que realmente tragam retorno e usuários ativos.} &
+& 
+\textcolor{blueval}{• Usar canais com melhor custo-benefício e engajamento real.} \\
+\textcolor{greenval}{• Priorizar atividades que os usuários consideraram mais úteis na pesquisa.} &
+&
+\textcolor{greenval}{• Fortalecer os canais que tiveram maior aprovação pelos usuários.} \\
 \hline
 \rowcolor{lightgray}
 \textbf{Recursos Chave} & & \textbf{Segmentos de Clientes} \\
-\cline{1-1}\cline{3-3}
-• Equipamentos & & • Programadores \\
+\cline{1-1}\cline{2-2}\cline{3-3}
+• Aquisição de Equipamentos & & • Programadores \\
 • Equipe de desenvolvimento & & • Decisores \\
-• Servidor e Domínio & & • Empreendedores \\
-• Verba para Marketing & & • Empresas \\
+• Contratação de Servidor & & • Empreendedores \\
+• Compra de Domínio & & • Empresas \\
+• Verba para Marketing & & \\
+\textcolor{red}{• Usar serviços gratuitos ou baratos no começo para economizar.} &
+& 
+\textcolor{red}{• Começar focando em estudantes e pequenos empreendedores.} \\
+\textcolor{blueval}{• Garantir recursos suficientes para não travar o projeto antes do lançamento.} &
+& 
+\textcolor{blueval}{• Focar em clientes que podem se tornar referência ou divulgar o projeto.} \\
+\textcolor{greenval}{• Priorizar recursos que facilitaram experiências positivas identificadas na pesquisa.} &
+&
+\textcolor{greenval}{• Direcionar esforços para os segmentos que mostraram maior interesse.} \\
 \hline
 \rowcolor{lightgray}
-\textbf{Estrutura de Custos} & \multicolumn{2}{c|}{\textbf{FINANCEIRO}} \\
-\cline{1-3}
-• Equipamentos & \rowcolor{lightgray}\textbf{Fontes de Receita} & \\
-• Servidor e Domínio & • Vendas de produtos/serviços & \\
-• Marketing & • Programa de afiliados & \\
-• Equipe & & \\
+\textbf{Estrutura de Custos} & & \textbf{Fluxo de Receitas} \\
+\hline
+• Hospedagem & & • Impulsionar Projetos \\
+• Domínio & & • Anúncio de Empresas Parceiras \\
+• Marketing & & • Patrocinadores \\
+• Manutenção & & \\
+• Serviços Externos (API de pagamentos, Integraçao com repositórios, etc...) & & \\
+\textcolor{red}{• Ficar de olho nos gastos e cortar o que não for essencial.} &
+&
+\textcolor{red}{• Pensar em cobrar planos simples depois que o projeto crescer.} \\
+\textcolor{blueval}{• Avaliar se os custos podem ser reduzidos sem prejudicar o projeto.} &
+&
+\textcolor{blueval}{• Explorar maneiras de gerar receita desde cedo sem assustar os usuários.} \\
+\textcolor{greenval}{• Usar a pesquisa para justificar investimentos estratégicos.} &
+&
+\textcolor{greenval}{• Priorizar fluxos de receita que o público demonstrou interesse real.} \\
 \hline
 \end{tabular}
-\caption{Business Model Canvas}
+
+\begin{center}
+\textbf{Legenda:} \\
+\textcolor{red}{\textbf{Vermelho}} = Primeira validação \quad
+\textcolor{blue}{\textbf{Azul}} = Segunda validação \quad
+\textcolor{green}{\textbf{Verde}} = Terceira validação
+\end{center}
+
 \end{table}
 
 \end{document}
