@@ -8,24 +8,22 @@
 \newcommand{\canvasTerceiroBloco}{}
 \newcommand{\canvasQuartoBloco}{}
 
-\newcommand{\setcanvas}[7]{%
-  \def\canvasTitle{#1}%
-  \def\canvasDescription{#2}%
-  \def\canvasCaption{#3}%
-  \def\canvasPrimeiroBloco{#4}%
-  \def\canvasSegundoBloco{#5}%
-  \def\canvasTerceiroBloco{#6}%
-  \def\canvasQuartoBloco{#7}%
+\newcommand{\setcanvas}[5]{%
+  \def\canvasCaption{#1}%
+  \def\canvasPrimeiroBloco{#2}%
+  \def\canvasSegundoBloco{#3}%
+  \def\canvasTerceiroBloco{#4}%
+  \def\canvasQuartoBloco{#5}%
 }
 
 \newcommand{\appendto}[2]{%
   \expandafter\gdef\expandafter#1\expandafter{#1 #2}%
 }
 
-\newcommand{\canvas}[1]{%
+\newcommand{\canvas}[3]{%
   \renewcommand{\arraystretch}{1.8}
-  \section*{\canvasTitle}
-  \canvasDescription
+  \section*{#1}
+  #2
   \vspace{0.5cm}
 
   \begin{table}[H]
@@ -57,9 +55,9 @@
   \end{tabular}
 
   \begin{center}
-  \ifx#1\empty\else
+  \ifx#3\empty\else
   \textbf{Legenda:} \\
-  #1
+  #3
   \fi
   \end{center}
   \end{table}
