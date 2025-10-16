@@ -5,17 +5,65 @@
 \usepackage{array}
 \usepackage[table]{xcolor}
 \usepackage{geometry}
+\usepackage{float}
+\usepackage{xparse}
 
 \geometry{paperwidth=700pt,paperheight=1300pt, margin=1cm}
 \definecolor{lightgray}{gray}{0.9}
-\definecolor{blueval}{RGB}{0,0,180} % azul para segunda validação
-\definecolor{greenval}{RGB}{0,150,0} % verde para terceira validação
-\newcommand{\hoje}{\number\day/\number\month/\number\year}
+\definecolor{blueval}{RGB}{0,0,180} % azul para terceira validação
+\definecolor{greenval}{RGB}{0,150,0} % verde para quarta validação
+\newcommand{\hoje}{08/10/2025}
+
+\newcommand{\canvas}[8]{
+\renewcommand{\arraystretch}{1.8}
+\section*{#1}
+#2
+
+\vspace{0.5cm}
+
+\begin{table}[H]
+\centering
+\caption{#3}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{|p{6cm}|p{6cm}|p{6cm}|}
+\hline
+\rowcolor{lightgray}
+\textbf{Parceiros Chave} &
+\centering\textbf{PROPOSTA DE VALOR} &
+\textbf{Relacionamento com Clientes} \\
+\cline{1-3}
+#4
+\hline
+\rowcolor{lightgray}
+\textbf{Atividades Chave} & & \textbf{Canais} \\
+\cline{1-3}
+#5
+\hline
+\rowcolor{lightgray}
+\textbf{Recursos Chave} & & \textbf{Segmentos de Clientes} \\
+\cline{1-3}
+#6
+\hline
+\rowcolor{lightgray}
+\textbf{Estrutura de Custos} & & \textbf{Fluxo de Receitas} \\
+\hline
+#7
+\hline
+\end{tabular}
+
+\begin{center}
+\textbf{Legenda:} \\
+#8
+\end{center}
+
+\end{table}
+}
+
 
 \begin{document}
 
 % ---------- HEADER ----------
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{10pt}
@@ -28,13 +76,16 @@ ColabHUB & Daniel, Diego, Gustavo Martins, Gustavo Policarpo e Leonardo & \hoje 
 \hline
 \end{tabular}
 \end{table}
-% ----------------------------
+
+\section*{Canvas Inicial}
+O projeto \textbf{ColabHUB} tem como proposta conectar desenvolvedores, empreendedores e empresas em um ambiente colaborativo, onde ideias podem se transformar em projetos reais. Esta primeira versão do Canvas apresenta a visão inicial do grupo, ainda sem validações externas.
 
 \vspace{0.5cm}
 
-% ---------- MAIN TABLE ----------
-\begin{table}[h!]
+% ---------- CANVAS 1: Conteúdo Original ----------
+\begin{table}[H]
 \centering
+\caption{Modelo de negócio de uma plataforma para colaboração em projetos para desenvolvedores e entusiastas}
 \renewcommand{\arraystretch}{1.8}
 \setlength{\tabcolsep}{4pt}
 \begin{tabular}{|p{6cm}|p{6cm}|p{6cm}|}
@@ -44,19 +95,10 @@ ColabHUB & Daniel, Diego, Gustavo Martins, Gustavo Policarpo e Leonardo & \hoje 
 \centering\textbf{PROPOSTA DE VALOR} &
 \textbf{Relacionamento com Clientes} \\
 \cline{1-1}\cline{2-2}\cline{3-3}
-• Empresas de Tecnologia (doações) & • Networking & • Website \\
+• Empresas de Tecnologia & • Networking & • Website \\
 • Provedores de Hospedagem & • Conveniência & • Redes Sociais \\
 & • Colaboração & • Aplicativo Móvel \\
 & • Estudo & \\
-\textcolor{red}{• Instituições de ensino.} &
-\textcolor{red}{• Simular o mercado de trabalho real.} &
-\textcolor{red}{• Fórum interno para se comunicar dentro do projeto.} \\
-\textcolor{blueval}{• Plataforma de contratação.} &
-\textcolor{blueval}{• Fomentar o trabalho em equipe.} &
-\textcolor{blueval}{• Criar formas de manter contato frequente e útil com usuários.} \\
-\textcolor{greenval}{• Fortalecer parcerias com empresas que se mostraram interessadas na pesquisa.} &
-\textcolor{greenval}{• Reforçar os benefícios mais valorizados pelos usuários na pesquisa.} &
-\textcolor{greenval}{• Investir em comunicação nos canais que os usuários preferem.} \\
 \hline
 \rowcolor{lightgray}
 \textbf{Atividades Chave} & & \textbf{Canais} \\
@@ -67,61 +109,286 @@ ColabHUB & Daniel, Diego, Gustavo Martins, Gustavo Policarpo e Leonardo & \hoje 
 & & • Afiliados (Influenciadores) \\
 & & • Social Orgânico \\
 & & • Blog \\
-
-\textcolor{red}{• Promoção dos projetos existentes e novos talentos.} & 
-& 
-\textcolor{red}{• Discord} \\
-\textcolor{blueval}{• Chat para comunicação interna.} &
-& 
-\textcolor{blueval}{• Comunidade do Whatsapp} \\
-\textcolor{greenval}{• Priorizar atividades que os usuários consideraram mais úteis na pesquisa.} &
-&
-\textcolor{greenval}{• Fortalecer os canais que tiveram maior aprovação pelos usuários.} \\
-
 \hline
 \rowcolor{lightgray}
 \textbf{Recursos Chave} & & \textbf{Segmentos de Clientes} \\
 \cline{1-1}\cline{2-2}\cline{3-3}
-• Aquisição de Equipamentos & & • Programadores \\
-• Equipe de desenvolvimento & & • Decisores \\
+• Aquisição de Equipamentos & & • Desenvolvedores \\
+• Equipe de desenvolvimento & & • UI/UX Designers \\
 • Contratação de Servidor & & • Empreendedores \\
-• Compra de Domínio & & • Empresas \\
+• Compra de Domínio & & • Startups \\
 • Verba para Marketing & & \\
-\textcolor{red}{• Coordenador para orientar e direcionar o marketing} &
-& 
-\textcolor{red}{• Behance, plataforma para encontrar portfólios} \\
-\textcolor{blueval}{• Contratação de gerente para orientar o crescimento da empresa.} &
-& 
-\textcolor{blueval}{• Estudantes} \\
-\textcolor{greenval}{• Priorizar recursos que facilitaram experiências positivas identificadas na pesquisa.} &
-&
-\textcolor{greenval}{• Direcionar esforços para os segmentos que mostraram maior interesse.} \\
 \hline
 \rowcolor{lightgray}
 \textbf{Estrutura de Custos} & & \textbf{Fluxo de Receitas} \\
 \hline
-• Hospedagem & & • Impulsionar Projetos \\
-• Domínio & & • Anúncio de Empresas Parceiras \\
+• Hospedagem & & • Planos de Assinatura \\
+• Domínio & & • Publicidade de Parceiros \\
 • Marketing & & • Patrocinadores \\
 • Manutenção & & \\
-• Serviços Externos (API de pagamentos, Integraçao com repositórios, etc...) & & \\
+• Serviços Externos (API de pagamentos, integração com repositórios) & & \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\newpage
+
+% ---------- CANVAS 2: Conteúdo Original + Especialista (Vermelho) ----------
+
+\section*{Primeira Validação}
+Após uma conversa com um especialista técnico, foram identificados pontos de melhoria voltados à parte operacional e estrutural do projeto. Essa validação ajudou a ajustar os recursos e atividades principais para garantir a viabilidade do ColabHUB.
+
+\vspace{0.5cm}
+
+\begin{table}[H]
+\centering
+\caption{Modelo de negócio de uma plataforma para colaboração em projetos para desenvolvedores e entusiastas}
+\renewcommand{\arraystretch}{1.8}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{|p{6cm}|p{6cm}|p{6cm}|}
+\hline
+\rowcolor{lightgray}
+\textbf{Parceiros Chave} &
+\centering\textbf{PROPOSTA DE VALOR} &
+\textbf{Relacionamento com Clientes} \\
+\cline{1-1}\cline{2-2}\cline{3-3}
+• Empresas de Tecnologia & • Networking & • Website \\
+• Provedores de Hospedagem & • Conveniência & • Redes Sociais \\
+& • Colaboração & • Aplicativo Móvel \\
+& • Estudo & \\
+\textcolor{red}{• Instituições de ensino.} &
+\textcolor{red}{• Simular o mercado de trabalho real.} &
+\textcolor{red}{• Fórum interno para se comunicar dentro do projeto.} \\
+& \textcolor{red}{• Criação de Portfólio} &
+\\
+\hline
+\rowcolor{lightgray}
+\textbf{Atividades Chave} & & \textbf{Canais} \\
+\cline{1-1}\cline{2-2}\cline{3-3}
+• Desenvolvimento da Plataforma & & • Google Adwords \\
+• Promoção da Plataforma nos Canais & & • Facebook Ads \\
+• Busca por Parceiros & & • Email Marketing \\
+& & • Afiliados (Influenciadores) \\
+& & • Social Orgânico \\
+& & • Blog \\
+& & 
+\textcolor{red}{• Divulgar em lugares que desenvolvedores realmente usam como Linkedin e Discord.} \\
+\hline
+\rowcolor{lightgray}
+\textbf{Recursos Chave} & & \textbf{Segmentos de Clientes} \\
+\cline{1-1}\cline{2-2}\cline{3-3}
+• Aquisição de Equipamentos & & • Desenvolvedores \\
+• Equipe de desenvolvimento & & • UI/UX Designers \\
+• Contratação de Servidor & & • Empreendedores \\
+• Compra de Domínio & & • Startups \\
+• Verba para Marketing & & \\
+\textcolor{red}{• Coordenador para orientar e direcionar o marketing} &
+& 
+\textcolor{red}{• Behance, plataforma para encontrar portfólios} \\
+\textcolor{red}{• Iniciar utilizando serviços gratuitos ou baratos, como Vercel} &
+& 
+\textcolor{red}{• Começar focando em desenvolvedores por já haver um conexões com esta área.} \\
+\hline
+\rowcolor{lightgray}
+\textbf{Estrutura de Custos} & & \textbf{Fluxo de Receitas} \\
+\hline
+• Hospedagem & & • Planos de Assinatura \\
+• Domínio & & • Publicidade de Parceiros \\
+• Marketing & & • Patrocinadores \\
+• Manutenção & & \\
+• Serviços Externos (API de pagamentos, integração com repositórios) & & \\
+\textcolor{red}{• Monday, plataforma para gerenciar custos e organizar o fluxo de trabalho.} &
+&
+\textcolor{red}{• Consultoria de especialistas da área para auxiliar no projeto.} \\
+\hline
+\end{tabular}
+
+\begin{center}
+\textbf{Legenda:} \\
+\textcolor{red}{\textbf{Vermelho}} = Primeira validação
+\end{center}
+
+\end{table}
+
+\newpage
+
+% ---------- CANVAS 3: Preto + Vermelho + Azul (Empresário) ----------
+\section*{Segunda Validação}
+Após a análise de um especialista com uma visão mais comercial, foram feitas melhorias no posicionamento do ColabHUB, focando em estratégias de mercado, atração de público e sustentabilidade financeira.
+
+\vspace{0.5cm}
+
+\begin{table}[H]
+\centering
+\caption{modelo de negócio de uma plataforma para colaboração em projetos para desenvolvedores e entusiastas}
+\renewcommand{\arraystretch}{1.8}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{|p{6cm}|p{6cm}|p{6cm}|}
+\hline
+\rowcolor{lightgray}
+\textbf{parceiros chave} &
+\centering\textbf{proposta de valor} &
+\textbf{relacionamento com clientes} \\
+\cline{1-1}\cline{2-2}\cline{3-3}
+• empresas de tecnologia & • networking & • website \\
+• provedores de hospedagem & • conveniência & • redes sociais \\
+& • colaboração & • aplicativo móvel \\
+& • estudo & \\
+\textcolor{red}{• Instituições de ensino.} &
+\textcolor{red}{• Simular o mercado de trabalho real.} &
+\textcolor{red}{• Fórum interno para se comunicar dentro do projeto.} \\
+& \textcolor{red}{• criação de portfólio} & \\
+\textcolor{blueval}{• Plataforma de contratação.} &
+\textcolor{blueval}{• Fomentar o trabalho em equipe.} &
+\textcolor{blueval}{• Criar formas de manter contato frequente e útil com usuários.} \\
+\textcolor{blueval}{• priorizar parcerias com empresas de tecnologia da região} & & \\
+\hline
+\rowcolor{lightgray}
+\textbf{atividades chave} & & \textbf{canais} \\
+\cline{1-1}\cline{2-2}\cline{3-3}
+• desenvolvimento da plataforma & & • google adwords \\
+• promoção da plataforma nos canais & & • facebook ads \\
+• busca por parceiros & & • email marketing \\
+& & • afiliados (influenciadores) \\
+& & • social orgânico \\
+& & • blog \\
+& & \textcolor{red}{• divulgar em lugares que desenvolvedores realmente usam como linkedin e discord.} \\
+\textcolor{blueval}{• Chat para comunicação interna.} &
+& 
+\textcolor{blueval}{• Comunidade do Whatsapp} \\
+\hline
+\rowcolor{lightgray}
+\textbf{recursos chave} & & \textbf{segmentos de clientes} \\
+\cline{1-1}\cline{2-2}\cline{3-3}
+• aquisição de equipamentos & & • desenvolvedores \\
+• equipe de desenvolvimento & & • ui/ux designers \\
+• contratação de servidor & & • empreendedores \\
+• compra de domínio & & • startups \\
+• verba para marketing & & \\
+\textcolor{red}{• Coordenador para orientar e direcionar o marketing} &
+& 
+\textcolor{red}{• Behance, plataforma para encontrar portfólios} \\
+\textcolor{red}{• Iniciar utilizando serviços gratuitos ou baratos, como vercel} &
+& 
+\textcolor{red}{• começar focando em desenvolvedores por já haver um conexões com esta área.} \\
+\textcolor{blueval}{• Contratação de gerente para orientar o crescimento da empresa.} &
+& 
+\textcolor{blueval}{• Estudantes} \\
+\hline
+\rowcolor{lightgray}
+\textbf{estrutura de custos} & & \textbf{fluxo de receitas} \\
+\hline
+• hospedagem & & • planos de assinatura \\
+• domínio & & • publicidade de parceiros \\
+• \textcolor{blueval}{priorizar o} marketing \textcolor{blueval}{apenas quando o projeto estiver estável} & & • patrocinadores \\
+• manutenção & & \\
+• serviços externos (api de pagamentos, integração com repositórios) & & \\
 \textcolor{red}{• Monday, plataforma para gerenciar custos e organizar o fluxo de trabalho.} &
 &
 \textcolor{red}{• Consultoria de especialistas da área para auxiliar no projeto.} \\
 \textcolor{blueval}{• Métricas e acompanhamento.} &
 &
 \textcolor{blueval}{• Assinatura.} \\
-\textcolor{greenval}{• Usar a pesquisa para justificar investimentos estratégicos.} &
+& & \textcolor{blueval}{• limitar a quantidade de colaboradores em planos gratuitos}  \\
+\hline
+\end{tabular}
+
+\begin{center}
+\textbf{Legenda:} \\
+\textcolor{red}{\textbf{Vermelho}} = Primeira validação
+\textcolor{blueval}{\textbf{Azul}} = Segunda validação
+\end{center}
+
+\end{table}
+
+\newpage
+
+% ---------- CANVAS 4: Preto + Vermelho + Azul + Verde (Pesquisa de Usuários) ----------
+\section*{Terceira Validação}
+Após a aplicação de uma pesquisa com o público-alvo, confirmou-se que o ColabHUB é um projeto relevante. Esta etapa consolidou as ideias anteriores e direcionou os próximos passos de acordo com o que o público mais valorizou.
+
+\vspace{0.5cm}
+
+\begin{table}[H]
+\centering
+\caption{Modelo de negócio de uma plataforma para colaboração em projetos para desenvolvedores e entusiastas}
+\renewcommand{\arraystretch}{1.8}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{|p{6cm}|p{6cm}|p{6cm}|}
+\hline
+\rowcolor{lightgray}
+\textbf{Parceiros Chave} &
+\centering\textbf{PROPOSTA DE VALOR} &
+\textbf{Relacionamento com Clientes} \\
+\cline{1-1}\cline{2-2}\cline{3-3}
+• Empresas de Tecnologia & • Networking & • Website \\
+• Provedores de Hospedagem & • Conveniência & • Redes Sociais \\
+& • Colaboração & • Aplicativo Móvel \\
+& • Estudo & \\
+\textcolor{red}{• Instituições de ensino.} &
+\textcolor{red}{• Simular o mercado de trabalho real.} &
+\textcolor{red}{• Fórum interno para se comunicar dentro do projeto.} \\
+& \textcolor{red}{• Criação de Portfólio} & \\
+\textcolor{blueval}{• Plataforma de contratação.} &
+\textcolor{blueval}{• Fomentar o trabalho em equipe.} &
+\textcolor{blueval}{• Criar formas de manter contato frequente e útil com usuários.} \\
+\textcolor{blueval}{• Priorizar parcerias com empresas de tecnologia da região} & & \\
+\hline
+\rowcolor{lightgray}
+\textbf{Atividades Chave} & & \textbf{Canais} \\
+\cline{1-1}\cline{2-2}\cline{3-3}
+• Desenvolvimento da Plataforma & & • Google Adwords \\
+• Promoção da Plataforma nos Canais & & • Facebook Ads \\
+• Busca por Parceiros & & • Email Marketing \\
+& & • Afiliados (Influenciadores) \\
+& & • Social Orgânico \\
+& & • Blog \\
+& & \textcolor{red}{• Divulgar em lugares que desenvolvedores realmente usam como Linkedin e Discord.} \\
+\textcolor{blueval}{• Chat para comunicação interna.} &
+& 
+\textcolor{blueval}{• Comunidade do Whatsapp} \\
+\hline
+\rowcolor{lightgray}
+\textbf{Recursos Chave} & & \textbf{Segmentos de Clientes} \\
+\cline{1-1}\cline{2-2}\cline{3-3}
+• Aquisição de Equipamentos & & • Desenvolvedores \\
+• Equipe de desenvolvimento & & • UI/UX Designers \\
+• Contratação de Servidor & & • Empreendedores \\
+• Compra de Domínio & & • Startups \\
+• Verba para Marketing & & \\
+\textcolor{red}{• Coordenador para orientar e direcionar o marketing} &
+& 
+\textcolor{red}{• Behance, plataforma para encontrar portfólios} \\
+\textcolor{red}{• Iniciar utilizando serviços gratuitos ou baratos, como Vercel} & & 
+\textcolor{red}{• Começar focando em desenvolvedores por já haver um conexões com esta área.} \\
+\textcolor{blueval}{• Contratação de gerente para orientar o crescimento da empresa.} &
+& 
+\textcolor{blueval}{• Estudantes} \\
+\hline
+\rowcolor{lightgray}
+\textbf{Estrutura de Custos} & & \textbf{Fluxo de Receitas} \\
+\hline
+• Hospedagem & & • Planos de Assinatura \\
+• Domínio & & • Publicidade de Parceiros \\
+• \textcolor{blueval}{Priorizar o} Marketing \textcolor{blueval}{apenas quando o projeto estiver estável} & & • Patrocinadores \\
+• Manutenção & & \\
+• Serviços Externos (API de pagamentos, integração com repositórios) & & \\
+\textcolor{red}{• Monday, plataforma para gerenciar custos e organizar o fluxo de trabalho.} &
 &
-\textcolor{greenval}{• Priorizar fluxos de receita que o público demonstrou interesse real.} \\
+\textcolor{red}{• Consultoria de especialistas da área para auxiliar no projeto.} \\
+\textcolor{blueval}{• Métricas e acompanhamento.} &
+&
+\textcolor{blueval}{• Assinatura.} \\
+& & \textcolor{blueval}{• Limitar a quantidade de colaboradores em planos gratuitos}  \\
 \hline
 \end{tabular}
 
 \begin{center}
 \textbf{Legenda:} \\
 \textcolor{red}{\textbf{Vermelho}} = Primeira validação \quad
-\textcolor{blue}{\textbf{Azul}} = Segunda validação \quad
-\textcolor{green}{\textbf{Verde}} = Terceira validação
+\textcolor{blueval}{\textbf{Azul}} = Segunda validação \quad
+\textcolor{greenval}{\textbf{Verde}} = Terceira validação
 \end{center}
 
 \end{table}
