@@ -1,0 +1,80 @@
+\newcommand{\hoje}{08/10/2025}
+
+\newcommand{\canvasTitle}{}
+\newcommand{\canvasDescription}{}
+\newcommand{\canvasCaption}{}
+\newcommand{\canvasPrimeiroBloco}{}
+\newcommand{\canvasSegundoBloco}{}
+\newcommand{\canvasTerceiroBloco}{}
+\newcommand{\canvasQuartoBloco}{}
+
+\newcommand{\setcanvas}[5]{%
+  \def\canvasCaption{#1}%
+  \def\canvasPrimeiroBloco{#2}%
+  \def\canvasSegundoBloco{#3}%
+  \def\canvasTerceiroBloco{#4}%
+  \def\canvasQuartoBloco{#5}%
+}
+
+\newcommand{\appendto}[2]{%
+  \expandafter\gdef\expandafter#1\expandafter{#1 #2}%
+}
+
+\newcommand{\canvas}[3]{%
+  \renewcommand{\arraystretch}{1.8}
+  \section*{#1}
+  #2
+  \vspace{0.5cm}
+
+  \begin{table}[H]
+  \centering
+  \caption{\canvasCaption}
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{|p{6cm}|p{6cm}|p{6cm}|}
+  \hline
+  \rowcolor{lightgray}
+  \textbf{Parceiros Chave} & \centering\textbf{PROPOSTA DE VALOR} & \textbf{Relacionamento com Clientes} \\
+  \cline{1-3}
+  \canvasPrimeiroBloco
+  \hline
+  \rowcolor{lightgray}
+  \textbf{Atividades Chave} & & \textbf{Canais} \\
+  \cline{1-3}
+  \canvasSegundoBloco
+  \hline
+  \rowcolor{lightgray}
+  \textbf{Recursos Chave} & & \textbf{Segmentos de Clientes} \\
+  \cline{1-3}
+  \canvasTerceiroBloco
+  \hline
+  \rowcolor{lightgray}
+  \textbf{Estrutura de Custos} & & \textbf{Fluxo de Receitas} \\
+  \hline
+  \canvasQuartoBloco
+  \hline
+  \end{tabular}
+
+  \begin{center}
+  \ifx#3\empty\else
+  \textbf{Legenda:} \\
+  #3
+  \fi
+  \end{center}
+  \end{table}
+}
+
+\newcommand{\canvasHeader}[3]{%
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{10pt}
+\rowcolors{1}{lightgray}{white}
+  \begin{tabular}{|p{4cm}|p{7cm}|p{3cm}|p{2cm}|}
+    \hline
+    \textbf{Projeto} & \textbf{Criado Por} & \textbf{Data} & \textbf{Versão} \\
+    \hline
+    #1 & #2 & \hoje & #3 \\
+    \hline
+  \end{tabular}
+\end{table}
+}
