@@ -14,51 +14,70 @@
 \definecolor{greenval}{RGB}{0,150,0} % verde para quarta validação
 \newcommand{\hoje}{08/10/2025}
 
-\newcommand{\canvas}[8]{
-\renewcommand{\arraystretch}{1.8}
-\section*{#1}
-#2
+\newcommand{\canvasTitle}{}
+\newcommand{\canvasDescription}{}
+\newcommand{\canvasCaption}{}
+\newcommand{\canvasPrimeiroBloco}{}
+\newcommand{\canvasSegundoBloco}{}
+\newcommand{\canvasTerceiroBloco}{}
+\newcommand{\canvasQuartoBloco}{}
 
-\vspace{0.5cm}
-
-\begin{table}[H]
-\centering
-\caption{#3}
-\setlength{\tabcolsep}{4pt}
-\begin{tabular}{|p{6cm}|p{6cm}|p{6cm}|}
-\hline
-\rowcolor{lightgray}
-\textbf{Parceiros Chave} &
-\centering\textbf{PROPOSTA DE VALOR} &
-\textbf{Relacionamento com Clientes} \\
-\cline{1-3}
-#4
-\hline
-\rowcolor{lightgray}
-\textbf{Atividades Chave} & & \textbf{Canais} \\
-\cline{1-3}
-#5
-\hline
-\rowcolor{lightgray}
-\textbf{Recursos Chave} & & \textbf{Segmentos de Clientes} \\
-\cline{1-3}
-#6
-\hline
-\rowcolor{lightgray}
-\textbf{Estrutura de Custos} & & \textbf{Fluxo de Receitas} \\
-\hline
-#7
-\hline
-\end{tabular}
-
-\begin{center}
-\textbf{Legenda:} \\
-#8
-\end{center}
-
-\end{table}
+\newcommand{\setcanvas}[7]{%
+  \def\canvasTitle{#1}%
+  \def\canvasDescription{#2}%
+  \def\canvasCaption{#3}%
+  \def\canvasPrimeiroBloco{#4}%
+  \def\canvasSegundoBloco{#5}%
+  \def\canvasTerceiroBloco{#6}%
+  \def\canvasQuartoBloco{#7}%
 }
 
+\newcommand{\appendto}[2]{%
+  \expandafter\gdef\expandafter#1\expandafter{#1 #2}%
+}
+
+\newcommand{\canvas}[1]{%
+  \renewcommand{\arraystretch}{1.8}
+  \section*{\canvasTitle}
+  \canvasDescription
+  \vspace{0.5cm}
+
+  \begin{table}[H]
+  \centering
+  \caption{\canvasCaption}
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{|p{6cm}|p{6cm}|p{6cm}|}
+  \hline
+  \rowcolor{lightgray}
+  \textbf{Parceiros Chave} & \centering\textbf{PROPOSTA DE VALOR} & \textbf{Relacionamento com Clientes} \\
+  \cline{1-3}
+  \canvasPrimeiroBloco
+  \hline
+  \rowcolor{lightgray}
+  \textbf{Atividades Chave} & & \textbf{Canais} \\
+  \cline{1-3}
+  \canvasSegundoBloco
+  \hline
+  \rowcolor{lightgray}
+  \textbf{Recursos Chave} & & \textbf{Segmentos de Clientes} \\
+  \cline{1-3}
+  \canvasTerceiroBloco
+  \hline
+  \rowcolor{lightgray}
+  \textbf{Estrutura de Custos} & & \textbf{Fluxo de Receitas} \\
+  \hline
+  \canvasQuartoBloco
+  \hline
+  \end{tabular}
+
+  \begin{center}
+  \ifx#1\empty\else
+  \textbf{Legenda:} \\
+  #1
+  \fi
+  \end{center}
+  \end{table}
+}
 
 \begin{document}
 
