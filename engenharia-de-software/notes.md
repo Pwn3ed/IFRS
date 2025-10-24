@@ -102,3 +102,7 @@ Quando utilizar?
 ## Histórias do Professor Responsável: Metodologia Científica Aplicada 1
 
 - O professor responsável deve aprovar o aluno para a obtenção do título de Tecnólogo em Análise e Desenvolvimento de Sistemas.
+
+## Design Thinking
+- Metodologia de aprender fazendo
+- Pensar fora da caixa
