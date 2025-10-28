@@ -1,161 +1,68 @@
-
-\documentclass[12pt]{article}
 \documentclass[12pt]{article}
 \usepackage[brazil]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{mindmap, shadows}
+\usepackage[a4paper, margin=2cm]{geometry}
 
 \begin{document}
 
 \section*{Perguntas e Respostas}
 
-\begin{enumerate}[label=\textbf{\arabic*.}]
+\subsection*{Aula 10/10}
 
+\begin{enumerate}[label=\textbf{\arabic*.}]
   \item \textbf{Por que Qualidade é um conceito relativo?} \\
-    Porque o que constitui “bom” depende de quem avalia (usuário, cliente, desenvolvedor), do contexto de uso, dos requisitos implicados e das expectativas, logo o valor de qualidade varia segundo perspectiva e finalidade.
+   Porque depende da percepção e das necessidades de cada usuário, o que é bom para um pode não ser para outro.
 
   \item \textbf{Cite e exemplifique 3 dimensões de qualidade.} \\
     \begin{itemize}
-      \item \textbf{Funcionalidade:} o software faz o que se espera (ex: um sistema bancário permite transferir valores). \\
-      \item \textbf{Confiabilidade:} o software mantém funcionamento estável sob condições previstas (ex: não falha durante picos de uso). \\
+      \item \textbf{Funcionalidade:} o software faz o que promete (ex: um app de alarme que dispara na hora certa). 
+      \item \textbf{Confiabilidade:} o software mantém funcionamento estável sob condições previstas (ex: não falha durante picos de uso). 
       \item \textbf{Usabilidade:} o software é fácil de usar, aprender e operar (ex: interface intuitiva para novos usuários).
     \end{itemize}
 
   \item \textbf{Por que é útil ter uma forma de mensurar qualidade?} \\
-    Porque sem métricas não se sabe se os objetivos de qualidade foram atingidos, não se identifica onde melhorar, não se compara opções ou produtos, e não se toma decisões informadas para gerenciar riscos.
+    Para avaliar, comparar e melhorar o software de forma objetiva e contínua.
 
   \item \textbf{Por que é necessária uma certificação de qualidade?} \\
-    Porque atesta que processos ou produtos seguem padrões reconhecidos, passa confiança a clientes interessados, garante consistência, transparência e redução de erros ou falhas, além de favorecer concorrência e conformidade.
+    Para garantir que o produto segue padrões reconhecidos e confiáveis, aumentando a credibilidade.
 
   \item \textbf{Diferencie Produto de Processo.} \\
-    \begin{itemize}
-      \item \textbf{Produto:} o resultado final ou item entregue (ex: software, módulo funcional). \\
-      \item \textbf{Processo:} o conjunto de atividades, métodos e recursos usados para produzir o produto (ex: ciclo de desenvolvimento, revisão de código, testes).
-    \end{itemize}
+  Produto é o resultado final (software pronto); processo é o conjunto de atividades que levam à sua criação.
 
   \item \textbf{Como a \textsc{ISO/IEC} 9126 se subdivide?} \\
-    Ela se divide em quatro partes: \\
+    Ela se divide em quatro partes:
     \begin{itemize}
-      \item Parte\,1: Modelo de qualidade (características e subcaracterísticas) \\
-      \item Parte\,2: Métricas externas \\
-      \item Parte\,3: Métricas internas \\
-      \item Parte\,4: Métricas de qualidade em uso (“quality in use”)
+      \item \textbf{Modelo de qualidade:} Composto por seis características principais (funcionalidade, confiabilidade, usabilidade, eficiência, manutenibilidade e portabilidade). 
+      \item \textbf{Métricas externas:} Avaliam o comportamento do sistema em operação.
+      \item \textbf{Métricas internas:} Avaliam o software antes da entrega, como código-fonte e arquitetura.
+      \item \textbf{Métricas de qualidade em uso:} Medem a satisfação e eficiência do usuário final.
     \end{itemize}
-
-  \item \textbf{Considerando a \textsc{ISO/IEC} 9126, diferencie qualidade interna e qualidade externa.} \\
-    \begin{itemize}
-      \item \textbf{Qualidade interna:} refere-se a atributos do software em estado não executável ou sob análise estática (ex: estrutura do código-fonte). \\
-      \item \textbf{Qualidade externa:} refere-se ao comportamento do software quando em execução, em seu ambiente de sistema (ex: resposta, falhas, interoperabilidade).
-    \end{itemize}
-
-  \item \textbf{Diferencie Qualidade de Software de Qualidade de processo de software.} \\
-    \begin{itemize}
-      \item \textbf{Qualidade de software:} refere-se ao produto de software — suas funcionalidades, desempenho, confiabilidade, manutenibilidade etc. \\
-      \item \textbf{Qualidade de processo de software:} refere-se à forma como o software foi desenvolvido — organização, métodos, controle, repetibilidade — e como isso influencia no produto final.
-    \end{itemize}
-
-  \item \textbf{Cite e explique sucintamente dois “mandamentos do software imaturo” que você já utilizou sem saber durante o curso ou no seu trabalho.} \\
-    Dois exemplos: \\
-    \begin{itemize}
-      \item “Não utilizar uma equipe de teste independente”: assume-se que os programadores testam seu próprio código, o que reduz esforço de QA mas pode comprometer imparcialidade e cobertura. \\
-      \item “Afastar o cliente do processo de desenvolvimento”: o cliente não participa ativamente após os requisitos iniciais, o que pode levar a resultados desalinhados com suas reais necessidades.
-    \end{itemize}
-
-  \item \textbf{Considerando os níveis de capacitação \textsc{SPICE}, diferencie “incompleto” de “executado”.} \\
-    No modelo \textsc{ISO/IEC} 15504 (ou SPICE) temos: \\
-    \begin{itemize}
-      \item Nível 0 (“Incompleto”): o processo não é implementado ou falha em atingir seu propósito. \\
-      \item Nível 1 (“Executado” ou “Performed”): o processo é implementado e atinge seu propósito, mas de forma não sistemática ou padronizada.
-    \end{itemize}
-
-  \item \textbf{O que é o PDCA?} \\
-    O PDCA (Plan-Do-Check-Act) é um ciclo de melhoria contínua: \\
-    \begin{itemize}
-      \item \textbf{Plan:} planejar. \\
-      \item \textbf{Do:} executar. \\
-      \item \textbf{Check:} verificar/checar os resultados. \\
-      \item \textbf{Act:} agir/corrigir para promover melhorias no processo ou produto.
-    \end{itemize}
-
 \end{enumerate}
 
-\end{document}
-\usepackage[brazil]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage{enumitem}
-
-\begin{document}
-
-\section*{Perguntas e Respostas}
+\subsection*{Aula 17/10}
 
 \begin{enumerate}[label=\textbf{\arabic*.}]
-
-  \item \textbf{Por que Qualidade é um conceito relativo?} \\
-    Porque o que constitui “bom” depende de quem avalia (usuário, cliente, desenvolvedor), do contexto de uso, dos requisitos implicados e das expectativas, logo o valor de qualidade varia segundo perspectiva e finalidade.
-
-  \item \textbf{Cite e exemplifique 3 dimensões de qualidade.} \\
-    \begin{itemize}
-      \item \textbf{Funcionalidade:} o software faz o que se espera (ex: um sistema bancário permite transferir valores). \\
-      \item \textbf{Confiabilidade:} o software mantém funcionamento estável sob condições previstas (ex: não falha durante picos de uso). \\
-      \item \textbf{Usabilidade:} o software é fácil de usar, aprender e operar (ex: interface intuitiva para novos usuários).
-    \end{itemize}
-
-  \item \textbf{Por que é útil ter uma forma de mensurar qualidade?} \\
-    Porque sem métricas não se sabe se os objetivos de qualidade foram atingidos, não se identifica onde melhorar, não se compara opções ou produtos, e não se toma decisões informadas para gerenciar riscos.
-
-  \item \textbf{Por que é necessária uma certificação de qualidade?} \\
-    Porque atesta que processos ou produtos seguem padrões reconhecidos, dá confiança a clientes/parte interessadas, assegura consistência, transparência e redução de erros ou falhas, além de favorecer concorrência e conformidade.
-
-  \item \textbf{Diferencie Produto de Processo.} \\
-    \begin{itemize}
-      \item \textbf{Produto:} o resultado final ou item entregue (ex: software, módulo funcional). \\
-      \item \textbf{Processo:} o conjunto de atividades, métodos e recursos usados para produzir o produto (ex: ciclo de desenvolvimento, revisão de código, testes).
-    \end{itemize}
-
-  \item \textbf{Como a \textsc{ISO/IEC} 9126 se subdivide?} \\
-    Ela se divide em quatro partes: \\
-    \begin{itemize}
-      \item Parte\,1: Modelo de qualidade (características e subcaracterísticas) \\
-      \item Parte\,2: Métricas externas \\
-      \item Parte\,3: Métricas internas \\
-      \item Parte\,4: Métricas de qualidade em uso (“quality in use”)
-    \end{itemize}
-
   \item \textbf{Considerando a \textsc{ISO/IEC} 9126, diferencie qualidade interna e qualidade externa.} \\
-    \begin{itemize}
-      \item \textbf{Qualidade interna:} refere-se a atributos do software em estado não executável ou sob análise estática (ex: estrutura do código-fonte). \\
-      \item \textbf{Qualidade externa:} refere-se ao comportamento do software quando em execução, em seu ambiente de sistema (ex: resposta, falhas, interoperabilidade).
-    \end{itemize}
+    Qualidade interna é medida dentro do código e estrutura do software, enquanto qualidade externa é observada durante o uso real pelo usuário.
 
   \item \textbf{Diferencie Qualidade de Software de Qualidade de processo de software.} \\
-    \begin{itemize}
-      \item \textbf{Qualidade de software:} refere-se ao produto de software — suas funcionalidades, desempenho, confiabilidade, manutenibilidade etc. \\
-      \item \textbf{Qualidade de processo de software:} refere-se à forma como o software foi desenvolvido — organização, métodos, controle, repetibilidade — e como isso influencia no produto final.
-    \end{itemize}
+    Qualidade de software avalia o produto final; qualidade de processo foca em como o software é desenvolvido.
 
   \item \textbf{Cite e explique sucintamente dois “mandamentos do software imaturo” que você já utilizou sem saber durante o curso ou no seu trabalho.} \\
-    Dois exemplos: \\
     \begin{itemize}
-      \item “Não utilizar uma equipe de teste independente”: assume-se que os programadores testam seu próprio código, o que reduz esforço de QA mas pode comprometer imparcialidade e cobertura. \\
-      \item “Afastar o cliente do processo de desenvolvimento”: o cliente não participa ativamente após os requisitos iniciais, o que pode levar a resultados desalinhados com suas reais necessidades.
+      \item “Funciona, então está pronto” – usar um programa sem testar bem.
+      \item “Corrigir direto no código” – resolver rápido sem analisar o impacto.
     \end{itemize}
 
   \item \textbf{Considerando os níveis de capacitação \textsc{SPICE}, diferencie “incompleto” de “executado”.} \\
-    No modelo \textsc{ISO/IEC} 15504 (ou SPICE) temos: \\
-    \begin{itemize}
-      \item Nível 0 (“Incompleto”): o processo não é implementado ou falha em atingir seu propósito. \\
-      \item Nível 1 (“Executado” ou “Performed”): o processo é implementado e atinge seu propósito, mas de forma não sistemática ou padronizada.
-    \end{itemize}
+    Incompleto: o processo não é implementado ou é parcialmente feito. \\
+    Executado: o processo é realizado e atinge seu propósito básico.
 
   \item \textbf{O que é o PDCA?} \\
-    O PDCA (Plan-Do-Check-Act) é um ciclo de melhoria contínua: \\
-    \begin{itemize}
-      \item \textbf{Plan:} planejar. \\
-      \item \textbf{Do:} executar. \\
-      \item \textbf{Check:} verificar/checar os resultados. \\
-      \item \textbf{Act:} agir/corrigir para promover melhorias no processo ou produto.
-    \end{itemize}
-
+    É um ciclo de melhoria contínua: Planejar (Plan), Executar (Do), Checar (Check) e Agir (Act).
 \end{enumerate}
 
 \end{document}
