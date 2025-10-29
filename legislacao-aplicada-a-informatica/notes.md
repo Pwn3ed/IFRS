@@ -54,3 +54,13 @@
 - Irresponsável
 
 - Estado moderno tem organização dos poderes.
+
+# Prova 26/11
+- Conceitos estudados em aula
+- Leis
+- Código de Defesa do Consumidor
+- Código 1° da Constituição Federal
+- Alguns artigos do Código Civil
+- Contratos de Software
+- Termos de Uso de Software
+
