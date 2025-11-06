@@ -109,3 +109,15 @@ Pontos Negativos:
 - CloudFlare Tunnel para aumentar a segurança
 
 - Usar docker containers
+
+# Apresentações pré-banca 06/11/25
+
+## Idealização
+
+- Contextualização
+- Objetivos
+- Fundamentação Teórica
+- Metodologia
+- O que foi desenvolvido
+- Conclusões
+
